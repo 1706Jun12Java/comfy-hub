@@ -14,7 +14,7 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="PROPERTY")
+@Table(name="PROPERTY_RENT")
 public class Property implements Serializable {
 	
 	public Property(int propertyID, String streetAddress, int size, float xCoord, float yCoord, District district) {
@@ -41,7 +41,7 @@ public class Property implements Serializable {
 	@Column(name="STREET_ADDRESS")
 	private String streetAddress; 
 	
-	@Column(name="SIZE")
+	@Column(name="ROOM_SIZE")
 	private int size; 
 	
 	@Column(name="X_COORD")

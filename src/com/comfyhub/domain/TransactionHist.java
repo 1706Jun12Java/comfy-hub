@@ -15,10 +15,10 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="TRANSACTION")
-public class Transaction implements Serializable {
+@Table(name="TRANSACTION_HIST")
+public class TransactionHist implements Serializable {
 	
-	public Transaction(int transactionID, Listing listing, User user, Payment payment, LocalDate startDate,
+	public TransactionHist(int transactionID, Listing listing, User user, Payment payment, LocalDate startDate,
 			LocalDate endDate) {
 		super();
 		this.transactionID = transactionID;
@@ -58,7 +58,7 @@ public class Transaction implements Serializable {
 	@Column(name="END_DATE")
 	private LocalDate endDate; 
 
-	public Transaction() {
+	public TransactionHist() {
 		// TODO Auto-generated constructor stub
 	}
 

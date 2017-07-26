@@ -11,12 +11,11 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="USER")
+@Table(name="USERS")
 public class User implements Serializable {
 	
-	public User(int userId, String firstName, String lastName, String email, String phone, String address) {
-		super();
-		this.userId = userId;
+	public User(String firstName, String lastName, String email, String phone, String address) {
+		super(); 
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;

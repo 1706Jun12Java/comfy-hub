@@ -1,27 +1,28 @@
 package com.comfyhub.main;
 
 import org.hibernate.Session;
-import com.comfyhub.util.HibernateUtil;
+import org.hibernate.Transaction;
+
+import com.comfyhub.domain.*;
+import com.comfyhub.util.*;
 
 
 public class Driver {
 
 	public static void main(String[] args) {
+		System.out.println("main");
 		init();
 	}
 	
 	static void init() {
 
-		Session s = HibernateUtil.getSession();
-		/*Transaction tx = s.beginTransaction();
 
-		 create transient objects 
-
-		Bat b1 = new Bat("Bob", 100, bt2, bc2);
-
-		System.out.println(s.save(bt1));
-
-		tx.commit();*/
+		User u = new User("a", "b", "c", "d", "e"); 
+		
+		Session s = HibernateUtil.getSession(); 
+		Transaction tx = s.beginTransaction();  
+		System.out.println(s.save(u)); 
+		tx.commit(); 
 		s.close();
 
 	}

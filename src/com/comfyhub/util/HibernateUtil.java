@@ -16,6 +16,7 @@ public class HibernateUtil {
 	}
 
 	public static Session getSession() {
+		//System.out.println(System.getProperty("user.dir"));
 		return sessionFactory("hibernate.cfg.xml").openSession();
 	}
 }
