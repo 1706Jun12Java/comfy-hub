@@ -14,7 +14,7 @@ public class Driver {
 		init();
 	}
 	
-	static void init() {
+	public static void init() {
 
 
 		User u = new User("a", "b", "c", "d", "e"); 
