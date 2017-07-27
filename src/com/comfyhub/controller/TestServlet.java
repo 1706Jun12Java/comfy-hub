@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.comfyhub.main.Driver;
+
 
 //@WebServlet("/TestServlet")
 public class TestServlet extends HttpServlet {
@@ -14,7 +16,9 @@ public class TestServlet extends HttpServlet {
    
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("We here!!");
+		System.out.println("ddd");
+		Driver d = new Driver();
+		d.init();
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
