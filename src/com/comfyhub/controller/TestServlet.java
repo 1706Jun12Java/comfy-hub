@@ -10,15 +10,12 @@ import javax.servlet.http.HttpServletResponse;
 
 //@WebServlet("/TestServlet")
 public class TestServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
+	private static final long serialVersionUID = 1L;    
    
 	@Override
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("We here!!");
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
-
 
 }
