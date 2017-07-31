@@ -22,8 +22,8 @@ public class TestServlet extends HttpServlet {
 		Driver d = new Driver();
 		d.init();
 		
-		User u1 = new User("John","Smith","jsmith@gmail.com","718-667-5676","356 Woodhaven Blvd"); 
-		Payment p1 = new Payment(50000,"USD","123454543","565",10,2020, u1);
+		User u1 = new User("John2","Smith2","jsmith@gmail.com","718-667-5676","356 Woodhaven Blvd"); 
+		Payment p1 = new Payment(10000,"USD","123454543","565",10,2020, u1);
 		
 		System.out.println(u1);
 		System.out.println(p1);
