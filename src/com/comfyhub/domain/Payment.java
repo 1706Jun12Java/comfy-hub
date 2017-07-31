@@ -18,10 +18,9 @@ import javax.persistence.Table;
 @Table(name="PAYMENT")
 public class Payment implements Serializable {
 	
-	public Payment(int paymentID, double amount, String currency, String cardNumber, String cvc, int expMonth,
+	public Payment(double amount, String currency, String cardNumber, String cvc, int expMonth,
 			int expYear, User user) {
-		super();
-		this.paymentID = paymentID;
+		super(); 
 		this.amount = amount;
 		this.currency = currency;
 		this.cardNumber = cardNumber;

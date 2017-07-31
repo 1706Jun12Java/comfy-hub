@@ -7,7 +7,9 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 
 public class HibernateUtil {
-
+	
+	private static SessionFactory sf = null;
+	
 	private static SessionFactory sessionFactory(String filename) {
 		Configuration c = new Configuration().configure(filename);
 		ServiceRegistry sr = new StandardServiceRegistryBuilder().applySettings(
@@ -16,7 +18,9 @@ public class HibernateUtil {
 	}
 
 	public static Session getSession() {
-		//System.out.println(System.getProperty("user.dir"));
-		return sessionFactory("hibernate.cfg.xml").openSession();
+		if (sf==null){
+			sf = sessionFactory("hibernate.cfg.xml");
+		} 
+		return sf.openSession();
 	}
 }

@@ -1,5 +1,10 @@
 package com.comfyhub.dao;
 
-public interface UserDao {
+import com.comfyhub.domain.User;
 
+public interface UserDao {
+	
+	public void createUser(User user);
+
+	
 }

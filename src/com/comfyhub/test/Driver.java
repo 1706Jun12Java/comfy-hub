@@ -1,4 +1,4 @@
-package com.comfyhub.main;
+package com.comfyhub.test;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
