@@ -18,8 +18,10 @@ import javax.persistence.Table;
 @Table(name="LISTING")
 public class Listing implements Serializable {
 	
+
+
 	public Listing(int listingID, Property property, LocalDate startDate, LocalDate endDate, double price,
-			String ownersNotes, boolean childrenAllowed, boolean smokingAllowed, boolean petsAllowed, boolean kitchen) {
+			String ownersNotes, boolean childrenAllowed, boolean smokingAllowed, boolean petsAllowed, boolean kitchen, String district) {
 		super();
 		this.listingID = listingID;
 		this.property = property;
@@ -31,6 +33,7 @@ public class Listing implements Serializable {
 		this.smokingAllowed = smokingAllowed;
 		this.petsAllowed = petsAllowed;
 		this.kitchen = kitchen;
+		this.district = district;
 	}
 
 
@@ -71,8 +74,21 @@ public class Listing implements Serializable {
 	private boolean petsAllowed; 
 	
 	@Column(name="KITCHEN")
-	private boolean kitchen; 
+	private boolean kitchen;
 	
+	@Column(name="DISTRICT")
+	private String district;
+	
+
+	public String getDistrict() {
+		return district;
+	}
+
+
+	public void setDistrict(String district) {
+		this.district = district;
+	}
+
 
 	public Listing() {
 		// TODO Auto-generated constructor stub

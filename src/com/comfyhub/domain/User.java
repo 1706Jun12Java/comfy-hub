@@ -1,12 +1,15 @@
 package com.comfyhub.domain;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -48,7 +51,25 @@ public class User implements Serializable {
 	
 	@Column(name="ADDRESS")
 	private String address; 
+	
+	@OneToMany(mappedBy="user",fetch=FetchType.LAZY)
+	private List<Payment> payments; 
 
+	@OneToMany(mappedBy="user",fetch=FetchType.LAZY)
+	private List<TransactionHist> transactions; 
+	
+	public List<TransactionHist> getTransactions() {
+		return transactions;
+	}
+
+	public void setTransactions(List<TransactionHist> transactions) {
+		this.transactions = transactions;
+	}
+
+	public List<Payment> getPayments() {
+		return payments;
+	}
+	
 	public User() {
 		// TODO Auto-generated constructor stub
 	}

@@ -1,5 +1,8 @@
 package com.comfyhub.dao;
 
-public interface DistrictDao {
+import java.util.List;
+import com.comfyhub.domain.*;
 
+public interface DistrictDao {
+	public List<District> getAllDistricts(); 
 }
