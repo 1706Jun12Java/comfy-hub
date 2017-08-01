@@ -22,6 +22,10 @@
 			<value>.jsp</value>
 		</property>
 	</bean>
+	 
+	
+	<mvc:resources mapping="/resources/**" location="/resources/" />
+	
 	<!-- jsps are just very convenient for this example. you'll be using other 
 		rendering techniques. -->
 </beans>
