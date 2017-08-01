@@ -19,8 +19,8 @@ public class TestServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("ddd");
-		Driver d = new Driver();
-		d.init();
+		//Driver d = new Driver();
+		//d.init();
 		
 		User u1 = new User("John3","Smith3","jsmith@gmail.com","718-667-5676","356 Woodhaven Blvd"); 
 		Payment p1 = new Payment(10000,"CNN","123454543","565",10,2020, u1);
