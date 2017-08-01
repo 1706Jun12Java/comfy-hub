@@ -9,7 +9,7 @@
 </head>
 <body>
 	<p>Enter your information:</p>
-	<form:form method="POST" action="addInfo" commandName="person">
+	<form:form method="POST" action="addInfo" commandName="user">
 		<table>
 			<tr>
 				<td><form:label path="firstName">First name:</form:label></td>

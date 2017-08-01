@@ -13,8 +13,11 @@ import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
+import org.springframework.stereotype.Component;
+
 @Entity
 @Table(name="USERS")
+@Component(value="User")
 public class User implements Serializable {
 	
 	public User(String firstName, String lastName, String email, String phone, String address) {

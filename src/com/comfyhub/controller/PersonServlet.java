@@ -26,19 +26,19 @@ public class PersonServlet {
 	@RequestMapping(value="/addInfo",method=RequestMethod.GET)
 	public String getPersonInfo(Model m){
 		System.out.println("addinfo");
-		m.addAttribute("person",new User());
+		m.addAttribute("user",new User());
 		return "infoPage";
 	}
 	
 	@RequestMapping(value="/addInfo",method=RequestMethod.POST)
-	public String addPersonInfo(User person, BindingResult br, Model m){
+	public String addPersonInfo(User user, BindingResult br, Model m){
 		if(br.hasErrors()){
 			Object errors  = br.getAllErrors();
 			m.addAttribute("errors",errors);
 			return "infoPage";
 		} else {
-			m.addAttribute("firstName",person.getFirstName());
-			m.addAttribute("lastName",person.getLastName()); 
+			m.addAttribute("firstName",user.getFirstName());
+			m.addAttribute("lastName",user.getLastName()); 
 			return "infoPage";
 		}
 		
